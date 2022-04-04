@@ -1039,14 +1039,3 @@ def kuaishou_main(reviews_file):
     business.to_csv(meta_output, sep='\t', header=False, index=False)
 
     return reviews_output, meta_output
-
-
-def get_categories_by_clustering(meta_file, num_centroids, items):
-
-    visual_feature = np.load(meta_file)
-    item_embed = visual_feature[items].astype('float32')
-
-    _, assignments = kmeans_cuda(item_embed, num_centroids, verbosity=1, seed=43)
-
-    return assignments
-
