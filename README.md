@@ -22,22 +22,42 @@ Please cite our paper if you use this repository.
 
 Run the script `reco_utils/dataset/sequential_reviews.py` to generate the data for training and evaluation.
 
+Details of the data are available at [Data](./tests/resources/deeprec/sequential/README.md).
+
 
   
 
 ## Model Training
 
-Use the following command to train a CLSR model on `Taobao` dataset: 
+Use the following commands to train a CLSR model on `Taobao` dataset: 
 
 ```
-python examples/00_quick_start/sequential.py --dataset taobao
+cd ./examples/00_quick_start/
+python sequential.py --dataset taobao
 ```
 
 or on `Kuaishou` dataset:
 
 ```
-python examples/00_quick_start/sequential.py --dataset kuaishou
+cd ./examples/00_quick_start/
+python sequential.py --dataset kuaishou
 ``` 
+
+
+## Pretrained Model Evaluation
+
+We provide a pretrained model for the `Taobao` dataset at [Model](./examples/00_quick_start/CLSR/taobao-clsr-debug/README.md).
+
+```
+cd ./examples/00_quick_start/
+python sequential.py --dataset taobao --only_test
+```
+
+The performance of the provided pretrained model is as follows:
+| AUC | GAUC | MRR | NDCG@2 |
+| ---- | ---- | ---- | ---- |
+| 0.8954 | 0.8936 | 0.4384 | 0.3807 |
+
 
 ## Note
 
