@@ -116,11 +116,9 @@ class SequentialIterator(BaseIterator):
         time_history_words = words[7].strip().split(",")
         time_history_sequence = self.get_time_history_sequence(time_history_words)
 
-        if self.time_unit == 's':
-            time_range = 3600 * 24
-        elif self.time_unit == 'ms':
+        if self.time_unit == 'ms':
             time_range = 3600 * 24 * 1000
-        elif self.time_unit == 'amp':
+        else:
             time_range = 3600 * 24 / 1000
 
         time_diff = []

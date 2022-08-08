@@ -17,7 +17,7 @@ from reco_utils.common.constants import SEED
 from reco_utils.recommender.deeprec.deeprec_utils import (
     prepare_hparams
 )
-from reco_utils.dataset.sequential_reviews import data_preprocessing, strong_data_preprocessing
+from reco_utils.dataset.sequential_reviews import data_preprocessing
 from reco_utils.recommender.deeprec.models.sequential.sli_rec import SLI_RECModel
 from reco_utils.recommender.deeprec.models.sequential.clsr import CLSRModel
 from reco_utils.recommender.deeprec.models.sequential.asvd import A2SVDModel
