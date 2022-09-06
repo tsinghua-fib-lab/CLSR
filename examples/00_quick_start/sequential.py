@@ -113,7 +113,6 @@ def get_model(flags_obj, model_path, summary_path, user_vocab, item_vocab, cate_
                                 max_seq_length=max_seq_length,
                                 pairwise_metrics=pairwise_metrics,
                                 weighted_metrics=weighted_metrics,
-                                counterfactual_recent_k=flags_obj.counterfactual_recent_k,
                                 time_unit=time_unit,
                     )
         model = SLI_RECModel(hparams, input_creator, seed=RANDOM_SEED)
